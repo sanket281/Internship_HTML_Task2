@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        var button1 = document.getElementById("month");
+        var button2 = document.getElementById("year");
+        var monthly = document.querySelectorAll(".monthly");
+        var yearly = document.querySelectorAll(".yearly");
+        button1.addEventListener("click", function(){
+            button1.classList.remove("inactive");
+            button1.classList.add("active");
+            button2.classList.remove("active");
+            button2.classList.add("inactive");
+
+            yearly.forEach(function(element) {
+            element.style.display = 'none';
+        });
+
+        monthly.forEach(function(element) {
+            element.style.display = 'block';
+        });
+        })
+        button2.addEventListener("click", function(){
+            button2.classList.remove("inactive");
+            button2.classList.add("active");
+            button1.classList.remove("active");
+            button1.classList.add("inactive");
+
+            monthly.forEach(function(element) {
+            element.style.display = 'none';
+        });
+
+        yearly.forEach(function(element) {
+            element.style.display = 'block';
+        });
+        })
+        });
+       
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="navbar">
+               
+                    <img src="./Group.png" alt="">
+                    <div class="link">
+                        <ul>
+                            <li><a href="">Home</a></li>
+                            <li><a href="">About Us</a></li>
+                            <li><a href="">Contact</a></li>
+                            <li><a href="">Services</a></li>
+                            <li><button>Account</button></li>
+                        </ul>                             
+                    </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="intro">
+            <div class="intro">
+                <div class="intro_intext">
+                    <h5>LITTLE MORE ABOUT US</h5>
+                    <H1>YOUR KIDS IS OUR FUTURE</H1> 
+                    <p>Lorem ipsum dolor sit<br> amet consectetur, adipisicing elit. Tempore suscipit aspernatur possimus ipsam doloribus aliquid!</p>
+                    <button class="btn">Read More</button>
+                </div>
+                <div class="intro_img">
+                    <img src="./girl.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section id="fourCards">
+            <div class="fourCards">
+                <div class="card" id="card1">
+                    <h4>Free Classes</h4>
+                    <div class="hr-container">
+                        
+                    </div>
+                    <p>Lorem ipsum dolor sit amet hdfigwgiuf ksgdfiuwge dfk jshfiuw consectetur adipisicing elit. Culpa repudiandae illo numquam tempora voluptatibus accusamus distinctio dolores ipsam excepturi odio?</p>
+
+                </div>
+                <div class="card" id="card2">
+                    <h4>Free Classes</h4>
+                    <div class="hr-container">
+                        
+                    </div>
+                    <p>Lorem ipsum dolor sit amet hdfigwgiuf ksgdfiuwge dfk jshfiuw consectetur adipisicing elit. Culpa repudiandae illo numquam tempora voluptatibus accusamus distinctio dolores ipsam excepturi odio?</p>
+
+                </div>
+                <div class="card" id="card3">
+                    <h4>Free Classes</h4>
+                    <div class="hr-container">
+                        
+                    </div>
+                    <p>Lorem ipsum dolor sit amet hdfigwgiuf ksgdfiuwge dfk jshfiuw consectetur adipisicing elit. Culpa repudiandae illo numquam tempora voluptatibus accusamus distinctio dolores ipsam excepturi odio?</p>
+
+                </div>
+                <div class="card" id="card4">
+                    <h4>Free Classes</h4>
+                    <div class="hr-container">
+                        
+                    </div>
+                    <p>Lorem ipsum dolor sit amet hdfigwgiuf ksgdfiuwge dfk jshfiuw consectetur adipisicing elit. Culpa repudiandae illo numquam tempora voluptatibus accusamus distinctio dolores ipsam excepturi odio?</p>
+
+                </div>
+            </div>
+        </section>
+        <section id="services">
+            <div class="services">
+                <h2>Best Classes and Camps</h2>
+                <p>Quam quisque id diam vel quam elementum. Vestibulum lectus mauris ultrices eros in cursus turpis 
+                    massa tincidunt. Pellentesque habitant morbi tristique senectus et netus.</p>
+                <div class="subCard">
+                    <div class="subCardInner">
+                        <img src="./mnmnmnmn 1.png" alt="">
+                        <div class="overlay-text">
+                            <p>One-of-a-kind Classes</p>
+                        </div>
+                    </div>
+                    <div class="subCardInner">
+                        <img src="./kjjkjk.png" alt="">
+                        <div class="overlay-text">
+                            <p>Summer Camps</p>
+                        </div>
+                    </div>
+                    <div class="subCardInner">
+                        <img src="./g.png" alt="">
+                        <div class="overlay-text">
+                            <p>Summer Camps</p>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </section>
+        <section id="prices">
+            <div class="prices">
+                <h3>We offer great <span class="price_word">price</span> plan for the application
+
+                </h3>
+                <div class="toogle">
+                    <div class="toogleInner">
+                        <button id="month" class="active">Monthly</button>
+                        <button id="year" class="inactive">Yearly</button>
+                    </div>
+                </div>
+                <div class="recommend">
+                    <div class="recommendInner" id="r1">
+                        <h5>Recommended</h5>
+                    </div>
+                    <div class="recommendInner" id="r2">
+                        <h5>Recommended</h5>
+                    </div>
+                    <div class="recommendInner" id="r3">
+                        <h5>Recommended</h5>
+                    </div>
+                    <div class="recommendInner" id="r4">
+                        <h5>Recommended</h5>
+                    </div>
+                </div>
+                <div class="prices_card" >
+                    <div class="priceCard" id="priceCard1">
+                        <h3>Starter</h3>
+                        <h5>Starter pack to help you to get started</h5>
+                        <h1 class="monthly">Free</h1>
+                        <h1 class="yearly">50$</h1>
+                        
+                        <button class="priceButton">Get Started</button>
+                    </div>
+                    <div class="priceCard" id="priceCard2">
+                        <h3>Pro</h3>
+                        <h5>More power for small teams create project plans with confidence</h5>
+                        <h5 class="monthly">$<span class="bold">20</span>/month</h5>
+                        <h5 class="yearly">$<span class="bold">400</span>/year</h5>
+                        
+                        <button class="priceButton">Get Started</button>
+                    </div>
+                    <div class="priceCard" id="priceCard3">
+                        <h3>Business+</h3>
+                        <h5>For companies that need to manage work happening across multiple teams</h5>
+                        <h5 class="monthly">$<span class="bold">100</span>/month</h5>
+                        <h5 class="yearly">$<span class="bold">2000</span>/year</h5>
+                        
+                        <button class="priceButton">Get Started</button>
+                    </div>
+                    <div class="priceCard" id="priceCard4">
+                        <h3>Enterprice</h3>
+                        <h5>For enterprise that need additional security, control, and support.</h5>
+                        <h1 class="monthly">Custom</h1>
+                        <h1 class="yearly">2000$</h1>
+                        
+                        <button class="priceButton">Contact Sales</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section id="getStarted">
+            <div class="getStarted">
+                <h1>Call To Action</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam voluptatibus voluptas, at eligendi beatae dolore tempore placeat a ad facere quia, praesentiu</p>
+              
+                    <button class="getStarted">Get Started</button>
+                
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <div class="footer">
+            <div class="upper">
+                <div>
+                    <img src="./circle 2.png" alt="">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam voluptatibus voluptas, at eligendi beatae dolore tempore placeat a ad facere quia, praesentiu</p>
+                    
+                </div>
+                <div class="form">
+                    <h2>Subscribe to our newsletter</h2>
+                    
+                        <form action="">
+                            
+                                <input type="text" placeholder="Enter your email">
+                                <button>Subscribe</button>
+                           
+                        </form>
+                    
+                </div>
+            </div>
+            <div class="bottom">
+                <div>
+                    <p>Copyright © 2024  -  Shaligraminfotech</p>
+                </div>
+                <div class="icons">
+                    <ul>
+                        <li><a href=""><img src="./wassup.png" alt=""></a></li>
+                        <li><a href=""><img src="./insta.png" alt=""></a></li>
+                        <li><a href=""><img src="./facebook.png" alt=""></a></li>
+                        <li><a href=""><img src="./youtube.png" alt=""></a></li>
+                    </ul>            
+                </div>
+            </div>
+        </div>
+    </footer>
+       
+</body>
+</html>
